@@ -1,3 +1,4 @@
+import { ReactNode } from 'react'
 import classNames from 'classnames'
 
 export enum ItemSize { Single, Double, Full }

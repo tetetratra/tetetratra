@@ -1,11 +1,9 @@
 "use client"
 
-import Image from 'next/image'
 import classNames from 'classnames'
 import { useState, useLayoutEffect, ReactNode } from 'react'
 import _ from 'lodash'
 
-import { Item, ItemSize } from './item'
 import { Title } from './items/title'
 import { Career } from './items/career'
 import { Careers } from './items/careers'
@@ -14,9 +12,7 @@ import { Links } from './items/links'
 import { Work } from './items/work'
 import { Works } from './items/works'
 
-const checkMd = () => window.matchMedia('(min-width:768px)').matches
-
-export default () => {
+export default function Main() {
   const [isMd, setIsMd] = useState(true)
   useLayoutEffect(() => { // 参考: https://stackoverflow.com/questions/19014250/rerender-view-on-browser-resize-with-react
     const updateIsMd = () => setIsMd(checkMd())
@@ -56,6 +52,8 @@ export default () => {
     </div>
   )
 }
+
+const checkMd = () => window.matchMedia('(min-width:768px)').matches
 
 const Row = ({ title, children }: { title?: boolean, children?: ReactNode }) => {
   const height = `

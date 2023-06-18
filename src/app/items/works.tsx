@@ -30,6 +30,7 @@ const Work = ({ name, href, src, description }: { name: string, href: string, sr
             width={50}
             height={50}
             style={{ borderRadius: '15%' }}
+            alt={name}
           />
         )}
       </div>

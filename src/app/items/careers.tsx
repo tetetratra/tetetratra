@@ -2,7 +2,7 @@ import classNames from 'classnames'
 
 import { Item, ItemSize } from '../item'
 
-export const Careers = ({ isMd }) => (
+export const Careers = ({ isMd }: { isMd: boolean }) => (
   <Item itemSize={ItemSize.Double} color='bg-[#EFFFDF]'>
     <div className='flex flex-col'>
       <Career
@@ -33,13 +33,12 @@ export const Careers = ({ isMd }) => (
   </Item>
 )
 
-const Career = ({ company, from, to, site, description, isMd}) => {
+const Career = ({ company, from, to, site, description, isMd }:
+  { company: string, from: string, to: string, site: string, description: string, isMd: boolean }) => {
   return (
     <div className="m-1 md:-ml-8 lg:-ml-24">
       <div className="-mb-2">
-        <time className="text-sm" datetime={from}>{from}</time>
-        <span className="text-sm">〜</span>
-        <time className="text-sm" datetime={to}>{to}</time>
+        <span className="text-sm">{from} 〜 {to}</span>
       </div>
       <div>
         <a className="text-lg text-blue-700 mr-3" rel="noopener noreferrer" href={site}>

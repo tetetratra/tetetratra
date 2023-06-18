@@ -1,5 +1,3 @@
-import classNames from 'classnames'
-
 import { Item, ItemSize } from '../item'
 
 export const Title = () => (

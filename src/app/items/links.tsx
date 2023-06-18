@@ -20,6 +20,7 @@ const Logo = ({ name, href, src }: { name: string, href: string, src: string }) 
           src={src}
           width={50}
           height={50}
+          alt={name}
         />
       </a>
       <span className="text-xs md:text-sm">{name}</span>
