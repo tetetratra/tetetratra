@@ -27,7 +27,7 @@ export default () => {
   }, [])
 
   return (
-    <div className="w-[360px] md:w-[750px] lg:w-[900px] m-auto mt-2">
+    <div className="w-[360px] md:w-[750px] lg:w-[900px] m-auto mt-2 mb-16">
       <Row title>
         <Title />
       </Row>
@@ -44,14 +44,14 @@ export default () => {
         </Row>
       ) : (
         <Row>
-          <Work placeRight/>
+          <Work placeRight />
           <Works />
         </Row>
       )}
 
       <Row>
         <Career />
-        <Careers />
+        <Careers isMd={isMd}/>
       </Row>
     </div>
   )
@@ -59,7 +59,7 @@ export default () => {
 
 const Row = ({ title, children }: { title?: boolean, children?: ReactNode }) => {
   const height = `
-       ${title ? 'h-[180px]' : 'h-[270px]'}
+    ${title ? 'h-[240px]' : 'h-[480px]'}
     md:h-[250px]
     lg:h-[300px]
   `

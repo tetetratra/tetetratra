@@ -1,7 +1,7 @@
-
 import classNames from 'classnames'
 
 export enum ItemSize { Single, Double, Full }
+import { recursiveFont } from './font'
 
 export const Item = ({ itemSize, color, placeRight, children }: { itemSize: ItemSize, color: string, placeRight?: boolean, children?: ReactNode }) => {
   let width = ''
@@ -31,7 +31,7 @@ export const Item = ({ itemSize, color, placeRight, children }: { itemSize: Item
   }
 
   return (
-    <div className={classNames('rounded-2xl text-3xl m-1 md:m-2', width, height, color)}>
+    <div className={classNames('flex justify-center items-center rounded-2xl text-3xl m-2 md:m-3', width, height, color, recursiveFont.className)}>
       {children}
     </div>
   )

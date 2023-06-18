@@ -1,9 +1,11 @@
+import classNames from 'classnames'
+
 import { Item, ItemSize } from '../item'
 
 export const Title = () => (
   <Item itemSize={ItemSize.Full} color='bg-[#DFFFDF]'>
-    <span className='text-5xl text-shadow'>
+    <div className={'text-shadow text-4xl md:text-5xl'}>
       tetetratra.net
-    </span>
+    </div>
   </Item>
 )
